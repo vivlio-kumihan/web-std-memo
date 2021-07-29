@@ -1,4 +1,53 @@
-body {
+@charset "utf-8";
+
+/* 全称セレクター */
+/* * {
+  color: black;
+} */
+
+/* 擬似セレクター */
+/* ほぼ<html>セレクターと同義 */
+:root {
+  font-size: 3.5mm;
+}
+
+section {
+  width: 600px;
+  margin: 0 auto;
+  padding: 3rem;
+  background-color: pink;
+}
+
+/* 回り込み解除の提携文 */
+section::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+h1 {
+  margin: 0 0 1em;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+p {
+  line-height: 1.6;
+}
+
+img {
+  float: right;
+  width: 320px;
+  margin: 0 0 1em 1em;
+}
+
+
+
+/* em {
+  font-weight: bold;
+} */
+
+/* body {
 }
 
 header {
@@ -11,9 +60,4 @@ aside {
 }
 
 footer {
-}
-
-h1 {
-  background-color: aquamarine;
-  color: aqua;
-}
+} */
