@@ -1,63 +1,42 @@
 @charset "utf-8";
 
-/* 全称セレクター */
-/* * {
-  color: black;
-} */
-
-/* 擬似セレクター */
-/* ほぼ<html>セレクターと同義 */
 :root {
   font-size: 3.5mm;
 }
 
-section {
-  width: 600px;
-  margin: 0 auto;
-  padding: 3rem;
-  background-color: pink;
-}
-
-/* 回り込み解除の提携文 */
-section::after {
-  content: "";
+a {
   display: block;
-  clear: both;
+  width: 300px;
+  margin: 2rem auto;
+  padding: 1rem;
+  text-align: center;
 }
 
-h1 {
-  margin: 0 0 1em;
-  font-size: 1.5rem;
-  font-weight: bold;
+@media screen and (min-width: 960px) {
+  a:hover {
+    opacity: 0.7;
+  }
+}
+.text-link {
+  color: blue;
+  text-decoration: underline;
 }
 
-p {
-  line-height: 1.6;
+.button-link1 {
+  text-decoration: none;
+  color: white;
+  background-color: coral;
 }
 
-img {
-  float: right;
-  width: 320px;
-  margin: 0 0 1em 1em;
+.button-link2 {
+  text-decoration: none;
+  color: white;
+  background-color: blue;
+  border-radius: 0.5rem;
+  border-bottom: solid 4px black;
 }
 
-
-
-/* em {
-  font-weight: bold;
-} */
-
-/* body {
+.button-link2:hover {
+  border-bottom: none;
+  transform: translateY(4px);
 }
-
-header {
-}
-
-main {
-}
-
-aside {
-}
-
-footer {
-} */
