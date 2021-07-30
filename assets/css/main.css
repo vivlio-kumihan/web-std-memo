@@ -6,63 +6,51 @@
 
 * {
 	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
-/* list1 */
-ul.gnav-list1 {
-	background: #1b9aaa;
-	padding: 0;
+section {
+	width: 90%;
+	margin: 40px auto 0;
+	padding: 20px 0 40px;
+	border: 1px dashed #ccc;
 	text-align: center;
 }
 
-ul.gnav-list1 li {
-	display: inline-block;
+h2 {
+	margin-bottom: 2rem;
 }
 
-ul.gnav-list1 li a {
-	display: block;
-	padding: 1em;
-	font-size: 1rem;
-	color: white;
-	text-decoration: none;
+.flex-container {
+	display: flex;
+	justify-content: space-around;
 }
 
-ul.gnav-list1 li a::first-line {
-	font-size: 1.5rem;
+.flex-item {
+	background: #09b;
+	color: #fff;
+	padding: 1rem;
+	flex-basis: 30%;
+}
+
+.flex-item dt {
+	margin-bottom: 10px;
+	font-size: 1.2rem;
 	font-weight: bold;
 }
-
-ul.gnav-list1 li a:hover {
-	background: #14727e;
+.flex-item dd {
+	text-align: justify;
 }
 
-
-/* list2 */
-ul.gnav-list2 {
-	background: #f0dcd4;
-	padding: 0;
-	text-align: center;
-}
-
-ul.gnav-list2 li {
-	display: inline-block;
-}
-
-ul.gnav-list2 li a {
-	display: block;
-	padding: 20px 20px 10px;
-	font-size: 1rem;
-	color: #7b645d;
-	text-decoration: none;
-}
-
-ul.gnav-list2 li a:hover {
-	padding-bottom: 4px;
-	border-bottom: 6px solid #7b645d;
-}
-
-ul.gnav-list2 li a img {
-	display: block;
-	margin: 0 auto 1rem;
-	height: 30px;
+@media screen and (max-width: 480px) {
+	h2 {
+		font-size: 1.1rem;
+	}
+	.flex-container {
+		flex-direction: column;
+	}
+	.flex-item {
+		margin: 0 1rem 1rem;
+	}
 }
