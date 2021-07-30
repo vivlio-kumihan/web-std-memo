@@ -58,6 +58,25 @@ ol li:last-of-type {
     background: transparent;
 }
 
+.first-line li:first-of-type {
+        font-weight: bold;
+        color: tomato;
+}
+
+.third-line li:nth-of-type(3) {
+        font-weight: bold;
+        color: tomato;
+}
+
+.odd-line li:nth-of-type(2n+1) {
+        font-weight: bold;
+        color: tomato;
+}
+
+.even-line li:nth-of-type(2n) {
+        font-weight: bold;
+        color: tomato;
+}
 
 /* #2 */
 /* ol 先頭文字のいろいろ */
