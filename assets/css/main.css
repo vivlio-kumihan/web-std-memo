@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 :root {
-  font-size: 3.5mm;
+	font-size: 3.5mm;
 }
 
 * {
@@ -10,47 +10,7 @@
 	padding: 0;
 }
 
-section {
-	width: 90%;
-	margin: 40px auto 0;
-	padding: 20px 0 40px;
-	border: 1px dashed #ccc;
-	text-align: center;
-}
-
-h2 {
-	margin-bottom: 2rem;
-}
-
-.flex-container {
-	display: flex;
-	justify-content: space-around;
-}
-
-.flex-item {
-	background: #09b;
-	color: #fff;
-	padding: 1rem;
-	flex-basis: 30%;
-}
-
-.flex-item dt {
-	margin-bottom: 10px;
-	font-size: 1.2rem;
-	font-weight: bold;
-}
-.flex-item dd {
-	text-align: justify;
-}
-
-@media screen and (max-width: 480px) {
-	h2 {
-		font-size: 1.1rem;
-	}
-	.flex-container {
-		flex-direction: column;
-	}
-	.flex-item {
-		margin: 0 1rem 1rem;
-	}
+.item {
+	margin: 0;
+	padding: 0;
 }
