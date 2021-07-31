@@ -11,11 +11,15 @@
     padding: 0;
 }
 
+/* position: absolute */
+
 section{
-    margin: 0 auto;
-    padding: 10px;
-    width: 80%;
-    background: #ccf;
+  position: relative;
+  margin: 0 auto;
+  padding: 10px;
+  width: 80%;
+  height: 80vh;
+  background: #ccf;
 }
 
 h1{
@@ -23,11 +27,44 @@ h1{
   color: #779;
 }
 
+/* 
+only "relative" => 『上の要素を基準』として画像を配置すると宣言する。
+"relative" => absoluteで指示している要素の『基準となる』と宣言する。
+              absoluteを宣言した要素はレイヤーとして浮くので、relativeで指定した要素は縦を指示しないと領域が上下に狭まる。
+*/
+img {
+  display: block;
+  position: absolute;
+  width: 300px;
+  top: 100px;
+  left: 100px;
+}
+
+/* positon: relative */
+/* 
+section{
+  margin: 0 auto;
+  padding: 10px;
+  width: 80%;
+  background: #ccf;
+}
+*/
+
+/* 
+h1{
+  margin: 0;
+  color: #779;
+}
+*/
+
 /* position: relative;で上にある要素をルートにする。 */
+
+/* 
 img {
   display: block;
   width: 300px;
   position: relative;
   top: 0px;
   left: 0px;
-}
+} 
+*/
