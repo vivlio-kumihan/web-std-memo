@@ -24,8 +24,28 @@ div{
 }
 
 /* ------------------------------------------
+	リピート柄と切り抜き画像、グラデーションに模様
+	 ------------------------------------------ */
+.bg-001 {
+	background: url("../img/bg-cat.png") left bottom no-repeat,
+							url("../img/bg-stripe.png") center center repeat;
+						}
+						
+.bg-002 {
+	background: url("../img/bg-frame.png") left center repeat,
+							linear-gradient(-135deg, #ffd5c9, #ff6464)
+}
+
+.bg-003 {
+	background: url("../img/bg-frame.png") left center repeat,
+							radial-gradient(at 100px 80px,#ffd5c9, #ff6464)
+}
+
+/* ------------------------------------------
 	背景画像のサイズ
 	 ------------------------------------------ */
+
+/* 
 div {
 	background: url("../img/bg-cat-light.png") right bottom no-repeat;
 }
@@ -45,6 +65,7 @@ div {
 .contain {
 	background-size: contain;
 }
+*/
 
 /* ------------------------------------------
 	背景画像リピートとベタ背景に切り抜き写真のせ
