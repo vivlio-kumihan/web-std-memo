@@ -2,17 +2,77 @@
 
 :root {
 	font-size: 3.5mm;
-	line-height: 1.5;
+  line-height: 1.5;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 *{
     box-sizing:border-box;
     margin: 0;
     padding: 0;
+  }
+
+body {
+  background: #e2d0bc;
 }
 
-/* position: absolute */
+section {
+  position: relative;
+  margin: 0 auto;
+  width: 1000px;
+  height: 600px;
+}
 
+.text-box {
+  position: absolute;
+  width: 600px;
+  top: 320px;
+  left: 0px;
+  z-index: 100;
+  padding: 20px;
+  background: #fff;
+  box-shadow: rgba(0,0,0,0.2) 0 0 20px 2px ;
+}
+
+h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5em;
+}
+
+/* ///////////// 複数のabsoluteと順番、およびtransparent ///////////// */
+
+.img-box1 {
+  position: absolute;
+  width: 70%;
+  margin-left: 30%;
+  z-index: 2;
+}
+
+.img-box2 {
+  position: absolute;
+  width: 45%;
+  height: 50vh;
+  margin: 0;
+  z-index: 5;
+}
+
+.hello {
+  margin: 0 auto;
+  width: 60%;
+  height: 100vh;
+  background: linear-gradient(to right, transparent 0%, transparent 80%,
+            #e2d0bc 100%), url("../../assets/img/cat.jpg") center center no-repeat;
+  background-size: 100% auto ;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+
+/* ///////////// positon: absolute ///////////// */
+/* 
 section{
   position: relative;
   margin: 0 auto;
@@ -21,17 +81,19 @@ section{
   height: 80vh;
   background: #ccf;
 }
-
+*/
+/* 
 h1{
   margin: 0;
   color: #779;
 }
-
+*/
 /* 
 only "relative" => 『上の要素を基準』として画像を配置すると宣言する。
 "relative" => absoluteで指示している要素の『基準となる』と宣言する。
               absoluteを宣言した要素はレイヤーとして浮くので、relativeで指定した要素は縦を指示しないと領域が上下に狭まる。
 */
+/* 
 img {
   display: block;
   position: absolute;
@@ -39,8 +101,10 @@ img {
   top: 100px;
   left: 100px;
 }
+*/
 
-/* positon: relative */
+
+/* ///////////// positon: relative ///////////// */
 /* 
 section{
   margin: 0 auto;
