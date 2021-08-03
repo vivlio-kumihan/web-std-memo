@@ -6,9 +6,78 @@
 
 * {
 	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
+/************* part2 *************/
+
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+}
+
+ul {
+	text-align: center;
+	background: yellowgreen;
+}
+
+ul li {
+	display: inline-block;
+	position: relative;
+}
+
+ul li a {
+	display: block;
+	padding: 1rem;
+	color: white;
+	font-size: 1.1rem;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+ul li a::after {
+	content: url(../img/arrow.png);
+	margin-left: 10px;
+	vertical-align: middle;
+}
+
+ul li a:hover {
+	background: #2c9869;
+}
+
+ul.sub-list {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	display: none;
+}
+
+ul.sub-list li {
+	width: 100%;
+}
+
+ul.gnav-list li:hover>ul.sub-list {
+	display: block;
+}
+
+main {
+	margin-top: 60px;
+}
+main div {
+	background: #eee;
+	width: 90%;
+	height: 80vh;
+	margin: 0 auto 40px;
+}
+
+
+/************* part1 *************/
+
 /* list1 */
+/* 
 ul.gnav-list1 {
 	background: #1b9aaa;
 	padding: 0;
@@ -35,9 +104,10 @@ ul.gnav-list1 li a::first-line {
 ul.gnav-list1 li a:hover {
 	background: #14727e;
 }
-
+*/
 
 /* list2 */
+/* 
 ul.gnav-list2 {
 	background: #f0dcd4;
 	padding: 0;
@@ -66,3 +136,4 @@ ul.gnav-list2 li a img {
 	margin: 0 auto 1rem;
 	height: 30px;
 }
+*/
