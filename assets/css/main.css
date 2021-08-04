@@ -11,157 +11,77 @@
 	padding: 0;
 }
 
-/************* part3 *************/
-/* ナビゲーションをハンバーガーメニューへ切替える */
-#gnav-content {
-	position: fixed;
-	top: 0;
-	left: -100%;
-	z-index: 100;
-	transition: 0.3s;
-	width: 100%;
-	max-width: 240px;
-	box-shadow: 6px 0 25px rgba(0, 0, 0, 0.15);
-}
 
-ul.gnav-list {
-	height: 100vh;
-	padding: 0;
-	text-align: center;
-	background: #1b9aaa;
-}
+/* ***************************************
+縦方向の中央揃え　ベースの設定
+背景にアミをひいて200px四方の図形を書く
+*************************************** */
 
-ul.gnav-list li {
-	display: block;
-}
 
-ul.gnav-list li a {
-	display: block;
-	padding: 1.5em;
-	font-size: 0.9rem;
-	color: white;
-	text-decoration: none;
-}
 
-ul.gnav-list li a::first-line {
-	font-size: 1.2rem;
-	font-weight: bold;
-}
 
-ul.gnav-list li a:hover {
-	background: #14727e;
-}
 
-.gnav-hidden {
-	display: none;
-}
 
-#gnav-btn {
-	display: block;
-	width: 40px;
-	height: 40px;
-	position: fixed;
-	top: 20px;
-	right: 20px;
-	z-index: 100;
-	background: #1b9aaa url(../img/gnav-btn-open.png) center center no-repeat;
-	border-radius: 0.5rem;
-}
 
-#gnav-black {
-	display: none;
-	position: fixed;
-	z-index: 90;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100vh;
-	background: rgba(0,0,0,0.5);
-}
-
-#gnav-input:checked ~ #gnav-btn {
-	background: #1b9aaa url(../img/gnav-btn-close.png) center center no-repeat;
-}
-
-#gnav-input:checked ~ #gnav-black {
-	display: block;
-}
-
-#gnav-input:checked ~ #gnav-content {
-	left: 0;
-}
-
-/************* part2 *************/
-/* ヘッダーに階層があるグローバルナビゲーションを設置する */
+/* ***************************************
+横方向の中央揃え　ベースの設定
+背景にアミをひいて200px四方の図形を書く
+*************************************** */
 /* 
-header {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100vw;
-}
+1. 
+アミはブロック性質を持っているから
+『width: 100%;』の指定でスクリーン横幅一杯に
+描画することができる。
 
-ul {
-	text-align: center;
-	background: yellowgreen;
-}
+2.
+高さは、内容に追従する。
+ */
 
-ul li {
-	display: inline-block;
-	position: relative;
-}
 
-ul li a {
-	display: block;
+div {
+	width: 100%;
 	padding: 1rem;
-	color: white;
-	font-size: 1.1rem;
-	font-weight: bold;
-	text-decoration: none;
-}
-
-ul li a::after {
-	content: url(../img/arrow.png);
-	margin-left: 10px;
-	vertical-align: middle;
-}
-
-ul li a:hover {
-	background: #2c9869;
-}
-
-ul.sub-list {
-	position: absolute;
-	top: 100%;
-	left: 0;
-	display: none;
-}
-
-ul.sub-list li {
-	width: 100%;
-}
-
-ul.gnav-list li:hover>ul.sub-list {
-	display: block;
-}
-
-main {
-	margin-top: 60px;
-}
-main div {
 	background: #eee;
-	width: 90%;
-	height: 80vh;
-	margin: 0 auto 40px;
 }
-*/
 
-/************* part1 *************/
+p {
+	width: 200px;
+	height: 200px;
+	font-weight: bold;
+	background: #00c;
+	color: #fff;
+}
 
-/* list1 */
-/* 
-ul.gnav-list1 {
-	background: #1b9aaa;
-	padding: 0;
+
+/* ブロック性質の要素を中央揃えにする。 */
+
+p {
+	margin: 0 auto;
 	text-align: center;
 }
+
+
+/*
+1.
+インライン性質の要素は親要素で中央揃えの指定をする。
+
+2.
+インライン性質では『margin: 0 auto;』は効かない。
+『親要素』へ中央揃えの『指示』をする。
+
+3.
+インライン性質を複数段落では、当然改行されず横並びになる。
+そして、内容の多寡によって表示が崩れる。
+FlexBoxで解決したほうがわかりやすい構造に出来る。
+ */
+
+/* 
+div {
+	text-align: center;
+}
+
+p {
+	display: inline-block;
+	text-align: center;
+}
+ */
