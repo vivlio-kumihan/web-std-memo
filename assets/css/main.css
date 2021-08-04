@@ -11,16 +11,80 @@
 	padding: 0;
 }
 
-
 /* ***************************************
 縦方向の中央揃え　ベースの設定
 背景にアミをひいて200px四方の図形を書く
 *************************************** */
 
+div {
+	width: 100%;
+	padding: 1rem;
+	background: #eee;
+}
+
+p {
+	width: 200px;
+	height: 200px;
+	color: #fff;
+	background: #ff0;
+}
+span {
+	padding: 1rem;
+	font-weight: bold;
+	background: #ef476f;
+}
+
+/* ***** インライン性質の要素を中央揃えにする。***** */
+/* 
+img, span {
+	vertical-align: middle;
+}
+ */
 
 
+/* ***** flexboxを使う ***** */
+/* 縦方向の中央揃え */
+/* 
+p {
+	display: flex;
+	align-items: center;
+}
+ */
+
+/* プラス　横方向の中央揃え */
+/* 
+p {
+	justify-content: center;
+	padding-right: 0.5rem;
+}
+ */
 
 
+/* ***** postionとtransformを使う。***** */
+/* 領域の指定した座標軸を親要素の中央に配置する。 */
+div {
+	position: relative;
+	height: 300px;
+}
+
+p {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+
+/* 親要素に対してセンターセンターを実行する。 */
+p {
+	transform: translate(-50%, -50%);
+}
+
+/* 中身もセンターセンターを実行する。 */
+p {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-right: 0.5rem;
+}
 
 
 /* ***************************************
@@ -37,7 +101,7 @@
 高さは、内容に追従する。
  */
 
-
+/* 
 div {
 	width: 100%;
 	padding: 1rem;
@@ -51,15 +115,15 @@ p {
 	background: #00c;
 	color: #fff;
 }
-
+ */
 
 /* ブロック性質の要素を中央揃えにする。 */
-
+/* 
 p {
 	margin: 0 auto;
 	text-align: center;
 }
-
+ */
 
 /*
 1.
